@@ -111,8 +111,7 @@
 				},
 				"results": {
 					"type": "array",
-					"items": "$ref": "#/definitions/PokemonLocation"
-					}
+					"items": {"$ref": "#/definitions/PokemonLocation"}
 				}
 			}
 		},
