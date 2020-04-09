@@ -114,16 +114,19 @@
 					"items": {
 						"type": "object",
 						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"url": {
-								"type": "string"
+							"$ref": "#/definitions/PokemonLocation"
 							}
 						}
 					}
 				}
 			}
+		},
+		"PokemonLocation": {
+		  "type": "object",
+		    "properties": {
+			"Name": "string",
+			"Url": "string"
+		    }
 		},
 		"Pokemon": {
 			"type": "object",
