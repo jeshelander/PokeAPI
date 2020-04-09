@@ -45,7 +45,6 @@
 						"description": "successful operation",
 						"schema": {
 							"$ref": "#/definitions/Page",
-                            "$ref": "#/definitions/Pokemon"
 						}
 					},
 					"400": {
