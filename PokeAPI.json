@@ -111,9 +111,7 @@
 				},
 				"results": {
 					"type": "array",
-					"items": {
-						"$ref": "#/definitions/PokemonLocation"
-						}
+					"items": "$ref": "#/definitions/PokemonLocation"
 					}
 				}
 			}
@@ -121,8 +119,8 @@
 		"PokemonLocation": {
 		  "type": "object",
 		    "properties": {
-			"Name": "string",
-			"Url": "string"
+			"name": "string",
+			"url": "string"
 		    }
 		},
 		"Pokemon": {
