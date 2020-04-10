@@ -37,7 +37,8 @@
                     {
                         "name": "limit",
                         "in": "path",
-                        "description": "Number to return"
+                        "description": "Number to return",
+			"type": "integer"
                     }
                 ],
 				"responses": {
