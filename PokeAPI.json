@@ -163,11 +163,6 @@
 		    }
 		},
         
-        "Abilities":{
-          "type": "array",
-            "items": {"$ref": "#/definitions/Ability"}
-        },
-        
         "Ability": {
           "type": "object",
             "properties": {
@@ -196,7 +191,8 @@
 			"type": "object",
 			"properties": {
                 "abilities": {
-                    "$ref": "#/definitions/Abilities"
+                    "type": "array",
+                    "$ref": "#/definitions/Ability"
                 },
                 "base_experience":{
                     "type": "integer",
