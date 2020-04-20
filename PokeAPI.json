@@ -158,8 +158,8 @@
 		"PokemonLocation": {
 		  "type": "object",
 		    "properties": {
-			"name": "string",
-			"url": "string"
+			 "name": "string",
+			 "url": "string"
 		    }
 		},
         
@@ -172,8 +172,7 @@
                         "example": "imposter"
                     },
                     "url": {
-                        "type": "string",
-                        "example": "https://pokeapi.co/api/v2/ability/150/"
+                        "type": "string"
                     }
                 },
                 "is_hidden": {
@@ -215,7 +214,8 @@
 					"example": "bulbasaur"
 				},
 				"sprites": {
-					"$ref": "#/definitions/Sprite"
+                    "type": "array",
+					"items": {"$ref": "#/definitions/Sprite"}
 				}
                 
 			},
