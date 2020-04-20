@@ -1,4 +1,5 @@
 {
+	{
 	"swagger": "2.0",
 	"info": {
 		"description": "The RESTful Pokémon API",
@@ -38,7 +39,8 @@
                         "name": "limit",
                         "in": "path",
                         "description": "Number to return",
-			"type": "integer"
+			             "type": "integer",
+                        "format":"int64"
                     }
                 ],
 				"responses": {
@@ -57,12 +59,12 @@
 				}
 			}
 		},
-		"/pokemon/{idOrName}": {
+		"/pokemon/{id}": {
 			"get": {
 				"tags": [
 					"pokemon"
 				],
-				"summary": "Find pokemon by ID or name",
+				"summary": "Find pokemon by ID",
 				"description": "Returns a single pokemon",
 				"operationId": "getPokemonByIdOrName",
 				"produces": [
@@ -71,9 +73,9 @@
 				],
 				"parameters": [
 					{
-						"name": "idOrName",
+						"name": "id",
 						"in": "path",
-						"description": "ID or name of pokemon to return",
+						"description": "ID of pokemon to return",
 						"required": true,
 						"type": "integer",
 						"format": "int64"
@@ -87,7 +89,45 @@
 						}
 					},
 					"400": {
-						"description": "Invalid ID or name supplied"
+						"description": "Invalid ID supplied"
+					},
+					"404": {
+						"description": "Pokemon not found"
+					}
+				}
+			}
+		},
+        
+        "/pokemon/{Name}": {
+			"get": {
+				"tags": [
+					"pokemon"
+				],
+				"summary": "Find pokemon by name",
+				"description": "Returns a single pokemon",
+				"operationId": "getPokemonByIdOrName",
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "Name",
+						"in": "path",
+						"description": "Name of pokemon to return",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "successful operation",
+						"schema": {
+							"$ref": "#/definitions/Pokemon"
+						}
+					},
+					"400": {
+						"description": "Invalid name supplied"
 					},
 					"404": {
 						"description": "Pokemon not found"
@@ -123,9 +163,46 @@
 			"url": "string"
 		    }
 		},
+        
+        "Abilities":{
+          "type": "array",
+            "items": {"$ref": "#/definitions/Ability"}
+        },
+        
+        "Ability": {
+          "type": "object",
+            "properties": {
+                "ability": {
+                    "name": {
+                        "type": "string",
+                        "example": "imposter"
+                    },
+                    "url": {
+                        "type": "string",
+                        "example": "https://pokeapi.co/api/v2/ability/150/"
+                    }
+                },
+                "is_hidden": {
+                    "type": "string"
+                },
+                "slot": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+                
+            }
+        },
+        
 		"Pokemon": {
 			"type": "object",
 			"properties": {
+                "abilities": {
+                    "$ref": "#/definitions/Abilities"
+                },
+                "base_experience":{
+                    "type": "integer",
+                    "format": "int64"
+                },
 				"id": {
 					"type": "integer",
 					"format": "int64"
@@ -145,6 +222,7 @@
 				"sprites": {
 					"$ref": "#/definitions/Sprite"
 				}
+                
 			},
 			"xml": {
 				"name": "Pokemon"
