@@ -192,7 +192,7 @@
 			"properties": {
                 "abilities": {
                     "type": "array",
-                    "$ref": "#/definitions/Ability"
+                    "items": "$ref": "#/definitions/Ability"
                 },
                 "base_experience":{
                     "type": "integer",
