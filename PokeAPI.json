@@ -1,5 +1,4 @@
 {
-	
 	"swagger": "2.0",
 	"info": {
 		"description": "The RESTful Pokémon API",
@@ -66,7 +65,7 @@
 				],
 				"summary": "Find pokemon by ID",
 				"description": "Returns a single pokemon",
-				"operationId": "getPokemonByIdOrName",
+				"operationId": "getPokemonById",
 				"produces": [
 					"application/xml",
 					"application/json"
@@ -105,7 +104,7 @@
 				],
 				"summary": "Find pokemon by name",
 				"description": "Returns a single pokemon",
-				"operationId": "getPokemonByIdOrName",
+				"operationId": "getPokemonByName",
 				"produces": [
 					"application/xml",
 					"application/json"
