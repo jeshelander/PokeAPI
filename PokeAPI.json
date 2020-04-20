@@ -214,13 +214,39 @@
 					"example": "bulbasaur"
 				},
 				"sprites": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/Sprite"}
-			},
-			"xml": {
-				"name": "Pokemon"
-			}
-		},
+                    "type": "object",
+                    "properties": {
+                        "back_default": {
+                        "type": "string"
+                        },
+                        "back_female": {
+                            "type": "string"
+                        },
+                        "back_shiny": {
+                            "type": "string"
+                        },
+                        "back_shiny_female": {
+                            "type": "string"
+                        },
+                        "front_default": {
+                            "type": "string"
+                        },
+                        "front_female": {
+                            "type": "string"
+                        },
+                        "front_shiny": {
+                            "type": "string"
+                        },
+                        "front_shiny_female": {
+                            "type": "string"
+                        }
+                    }
+			     },
+                "xml": {
+                    "name": "Pokemon"
+                }
+		      }
+        },
 		"Sprite": {
 			"type": "object",
 			"properties": {
@@ -250,9 +276,10 @@
 				}
 			}
 		}
-	},
+    },
 	"externalDocs": {
 		"description": "Find out more about Swagger",
 		"url": "http://swagger.io"
 	}
+    
 }
