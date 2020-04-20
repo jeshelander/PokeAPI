@@ -213,11 +213,7 @@
 					"type": "string",
 					"example": "bulbasaur"
 				},
-				"sprites": {
-                    "type": "array",
-					"items": {"$ref": "#/definitions/Sprite"}
-				}
-                
+				"sprites": {"$ref": "#/definitions/Sprite"}
 			},
 			"xml": {
 				"name": "Pokemon"
