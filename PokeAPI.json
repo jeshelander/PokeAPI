@@ -35,18 +35,16 @@
 				],
                 "parameters": [
                     {
-                        "name": "limit",
                         "in": "query",
-                        "description": "Number to return",
-			"type": "integer",
-                        "format":"int64",
-		    },
-			{
-			 "name": "offset",
-                        "in": "query",
-                        "description": "What number to start at",
+                        "name": "offset",
                         "type": "integer",
-                        "format": "int64",
+                        "description": "The number of items to skip before starting to collect the result set."
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "type": "integer",
+                        "description": "The numbers of items to return."
                     }
                 ],
 				"responses": {
