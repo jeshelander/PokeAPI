@@ -38,8 +38,14 @@
                         "name": "limit",
                         "in": "query",
                         "description": "Number to return",
-			             "type": "integer",
-                        "format":"int64"
+			"type": "integer",
+                        "format":"int64",
+			
+			 "name": "offset",
+                        "in": "query",
+                        "description": "What number to start at",
+                        "type": "integer",
+                        "format": "int64",
                     }
                 ],
 				"responses": {
