@@ -140,6 +140,7 @@
 			}
 		}
 	},
+    
 	"definitions": {
 		"Page": {
 			"type": "object",
@@ -160,6 +161,7 @@
 				}
 			}
 		},
+        
 		"PokemonLocation": {
 		  "type": "object",
 		    "properties": {
@@ -171,23 +173,28 @@
         "Ability": {
           "type": "object",
             "properties": {
-                "ability": {
-                    "name": {
-                        "type": "string",
-                        "example": "imposter"
-                    },
-                    "url": {
-                        "type": "string"
-                    }
-                },
+                "ability": {"$ref": "#/definitions/AbilityName"},
                 "is_hidden": {
-                    "type": "string"
+                    "type": "string",
                 },
                 "slot": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
                 }
                 
+            }
+        },
+        
+        "AbilityName":{
+            "type": "object",
+            "properties":{
+                "name": {
+                        "type": "string",
+                        "example": "imposter",
+                },
+                "url": {
+                    "type": "string",
+                }
             }
         },
         
@@ -196,62 +203,35 @@
 			"properties": {
                 "abilities": {
                     "type": "array",
-                    "items": {"$ref": "#/definitions/Ability"}
+                    "items": {"$ref": "#/definitions/Ability",}
                 },
                 "base_experience":{
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
                 },
 				"id": {
 					"type": "integer",
-					"format": "int64"
+					"format": "int64",
 				},
 				"height": {
 					"type": "integer",
-					"format": "int64"
+					"format": "int64",
 				},
 				"weight": {
 					"type": "integer",
-					"format": "int64"
+					"format": "int64",
 				},
 				"name": {
 					"type": "string",
-					"example": "bulbasaur"
+					"example": "bulbasaur",
 				},
-				"sprites": {
-                    "type": "object",
-                    "properties": {
-                        "back_default": {
-                        "type": "string"
-                        },
-                        "back_female": {
-                            "type": "string"
-                        },
-                        "back_shiny": {
-                            "type": "string"
-                        },
-                        "back_shiny_female": {
-                            "type": "string"
-                        },
-                        "front_default": {
-                            "type": "string"
-                        },
-                        "front_female": {
-                            "type": "string"
-                        },
-                        "front_shiny": {
-                            "type": "string"
-                        },
-                        "front_shiny_female": {
-                            "type": "string"
-                        }
-                    }
-			     },
+				"sprites": {"$ref": "#/definitions/Sprite"},
                 "xml": {
                     "name": "Pokemon"
                 }
-		      }
+            }
         },
+        
 		"Sprite": {
 			"type": "object",
 			"properties": {
@@ -282,6 +262,7 @@
 			}
 		}
     },
+    
 	"externalDocs": {
 		"description": "Find out more about Swagger",
 		"url": "http://swagger.io"
