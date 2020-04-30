@@ -165,15 +165,18 @@
 		"PokemonLocation": {
 		  "type": "object",
 		    "properties": {
-			 "name": "string",
-			 "url": "string"
-		    }
+			 "name": {
+                "type": "string"
+             },
+			 "url": {
+                "type": "string"
+             }
 		},
         
         "Ability": {
           "type": "object",
             "properties": {
-                "ability": {"$ref": "#/definitions/AbilityName"},
+                "ability": {"$ref": "#/definitions/PokemonLocation"},
                 "is_hidden": {
                     "type": "string",
                 },
@@ -185,18 +188,7 @@
             }
         },
         
-        "AbilityName":{
-            "type": "object",
-            "properties":{
-                "name": {
-                        "type": "string",
-                        "example": "imposter",
-                },
-                "url": {
-                    "type": "string",
-                }
-            }
-        },
+        
         
 		"Pokemon": {
 			"type": "object",
