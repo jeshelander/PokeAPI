@@ -37,7 +37,7 @@
 					"200": {
 						"description": "successful operation",
 						"schema": {
-							"$ref": "#/definitions/Page",
+							"$ref": "#/definitions/Odata"
 						}
 					},
 					"400": {
@@ -51,8 +51,38 @@
 		}
 	},
 	"definitions": {
+		"Odata": {
+			"type":"object",
+			"properties": {
+				"odata.metadata": {"type":"string"},
+				"odata.count": {
+					"type": "integer",
+					"format": "int64"
+				},
+				"value": {
+					"type": "array"
+					"items":  {"$ref": "#/definitions/Page"}
+				},
+			},
+		},
 		"Page": {
-			"type": "string",
+			"type": "object",
+			"properties": {
+				"count": {
+					"type": "integer",
+					"format": "int64"
+				},
+				"next": {
+					"type": "string"
+				},
+				"previous": {
+					"type": "string"
+				},
+				"results": {
+					"type": "array",
+					"items": {"$ref": "#/definitions/PokemonLocation"}
+				}
+			}
 			
 		},
         
