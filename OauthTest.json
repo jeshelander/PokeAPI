@@ -33,7 +33,6 @@
 					"application/xml",
 					"application/json"
 				],
-                ],
 				"responses": {
 					"200": {
 						"description": "successful operation",
