@@ -1,0 +1,88 @@
+"swagger": "2.0",
+	"info": {
+		"description": "The RESTful Pokémon API",
+		"version": "1.0.0",
+		"title": "PokéAPI"
+	},
+	"host": "http://localhost:30224",
+	"basePath": "/api",
+	"tags": [
+		{
+			"name": "pokemon",
+			"description": "Everything about Pokemon",
+			"externalDocs": {
+				"description": "Find out more",
+				"url": "https://pokeapi.co/docs/v2.html"
+			}
+		}
+	],
+	"schemes": [
+		"https"
+	],
+	"paths": {
+		"/values": {
+			"get": {
+				"tags": [
+					"pokemon"
+				],
+				"summary": "Find pokemon by ID",
+				"description": "Returns a single pokemon",
+				"operationId": "getPokemon",
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "successful operation",
+						"schema": {
+							"$ref": "#/definitions/Page"
+						}
+					},
+					"400": {
+						"description": "Invalid ID supplied"
+					},
+					"404": {
+						"description": "Pokemon not found"
+					}
+				}
+			}
+		},
+		
+	},
+	"definitions": {
+		"Page": {
+			"type": "object",
+			"properties": {
+				"count": {
+					"type": "integer",
+					"format": "int64"
+				},
+				"next": {
+					"type": "string"
+				},
+				"previous": {
+					"type": "string"
+				},
+				"results": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"url": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		},
+	},
+	"externalDocs": {
+		"description": "Find out more about Swagger",
+		"url": "http://swagger.io"
+	}
+}
