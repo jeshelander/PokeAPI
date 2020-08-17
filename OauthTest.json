@@ -52,23 +52,8 @@
 	},
 	"definitions": {
 		"Page": {
-			"type": "object",
-			"properties": {
-				"count": {
-					"type": "integer",
-					"format": "int64"
-				},
-				"next": {
-					"type": "string"
-				},
-				"previous": {
-					"type": "string"
-				},
-				"results": {
-					"type": "array",
-					"items": {"$ref": "#/definitions/PokemonLocation"}
-				}
-			}
+			"type": "string",
+			
 		},
         
 		"PokemonLocation": {
