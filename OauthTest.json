@@ -60,7 +60,7 @@
 					"format": "int64"
 				},
 				"value": {
-					"type": "array"
+					"type": "array",
 					"items":  {"$ref": "#/definitions/Page"}
 				},
 			},
