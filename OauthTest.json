@@ -5,8 +5,8 @@
 		"version": "1.0.0",
 		"title": "PokéAPI"
 	},
-	"host": "pokeapi.co",
-	"basePath": "/api/v2",
+	"host": "localhost:30224/",
+	"basePath": "/api",
 	"tags": [
 		{
 			"name": "pokemon",
@@ -18,7 +18,7 @@
 		}
 	],
 	"schemes": [
-		"https"
+		"http"
 	],
 	"paths": {
 		"/values": {
