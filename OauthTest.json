@@ -21,7 +21,7 @@
 		"type": "apiKey",
     		"name": "api_key",
     		"in": "header"
-	}
+	},
 	 "securityDefinitions": {
       		"OAuth2": {
          		"type": "oauth2",
