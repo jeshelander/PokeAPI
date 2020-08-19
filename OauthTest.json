@@ -26,7 +26,7 @@
       		"OAuth2": {
          		"type": "oauth2",
          		"flow": "accessCode",
-         		"authorizationUrl": "https://example.com/oauth/authorize",
+         		"authorizationUrl": "https://https://k2.denallix.com/sts/Windows",
          		"tokenUrl": "https://example.com/oauth/token",
          		"scopes": {
             			"read": "Grants read access",
@@ -34,7 +34,7 @@
             			"admin": "Grants read and write access to administrative information"
          		}
       		}
-   	}
+   	},
    	
 	"schemes": [
 		"http"
