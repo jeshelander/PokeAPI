@@ -17,30 +17,25 @@
 			}
 		}
 	],
-	
-   	"components": {
-	      "securitySchemes": {
-		 "oAuthSample": {
-		    "type": "oauth2",
-		    "description": "This API uses OAuth 2 with the implicit grant flow. [More info](https://api.example.com/docs/auth)",
-		    "flows": {
-		       "implicit": {
-			  "authorizationUrl": "https://k2.denallix.com/Identity/sts/windows",
-			  "scopes": {
-			     "get_list": "odata list"
-			  }
-		       }
-		    }
-		 }
-	      }
-	   },
-	   "security": [
-	      {
-		 "oAuthSample": [
-		    "get_list"
-		 ]
-	      }
-	   ],
+	"api_key": {
+		"type": "apiKey",
+    		"name": "api_key",
+    		"in": "header"
+	}
+	 "securityDefinitions": {
+      		"OAuth2": {
+         		"type": "oauth2",
+         		"flow": "accessCode",
+         		"authorizationUrl": "https://example.com/oauth/authorize",
+         		"tokenUrl": "https://example.com/oauth/token",
+         		"scopes": {
+            			"read": "Grants read access",
+            			"write": "Grants write access",
+            			"admin": "Grants read and write access to administrative information"
+         		}
+      		}
+   	}
+   	
 	"schemes": [
 		"http"
 	],
