@@ -5,7 +5,7 @@
 		"version": "1.0.0",
 		"title": "PokéAPI"
 	},
-	"host": "localhost:30224/",
+	"host": "localhost:44392/",
 	"basePath": "/api",
 	"tags": [
 		{
@@ -17,37 +17,20 @@
 			}
 		}
 	],
-	"api_key": {
-		"type": "apiKey",
-    		"name": "api_key",
-    		"in": "header"
-	},
-	 "securityDefinitions": {
-      		"OAuth2": {
-         		"type": "oauth2",
-         		"flow": "accessCode",
-         		"authorizationUrl": "https://https://k2.denallix.com/sts/Windows",
-         		"tokenUrl": "https://example.com/oauth/token",
-         		"scopes": {
-            			"read": "Grants read access",
-            			"write": "Grants write access",
-            			"admin": "Grants read and write access to administrative information"
-         		}
-      		}
-   	},
+	
    	
 	"schemes": [
-		"http"
+		"https"
 	],
 	"paths": {
 		"/values": {
 			"get": {
 				"tags": [
-					"pokemon"
+					"Workflow Values"
 				],
-				"summary": "List of Pokemon and their ID",
-				"description": "Returns list of pokemon",
-				"operationId": "getPokemon",
+				"summary": "Return odata list of workflow values",
+				"description": "Return odata list of workflow values",
+				"operationId": "GetWFValues",
 				"produces": [
 					"application/xml",
 					"application/json"
@@ -55,15 +38,13 @@
 				"responses": {
 					"200": {
 						"description": "successful operation",
-						"schema": {
-							"$ref": "#/definitions/Odata"
-						}
+						"schema": { "type": "string"}
 					},
 					"400": {
 						"description": "Invalid ID supplied"
 					},
 					"404": {
-						"description": "Pokemon not found"
+						"description": "Not found"
 					}
 				}
 			}
