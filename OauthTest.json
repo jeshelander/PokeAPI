@@ -38,7 +38,7 @@
 				"responses": {
 					"200": {
 						"description": "successful operation",
-						"schema": { "type": "string"}
+						"schema": { "$ref": "#/definitions/Odata" }
 					},
 					"400": {
 						"description": "Invalid ID supplied"
@@ -52,54 +52,10 @@
 	},
 	"definitions": {
 		"Odata": {
-			"type":"object",
-			"properties": {
-				"odata.metadata": {"type":"string"},
-				"odata.count": {
-					"type": "integer",
-					"format": "int64"
-				},
-				"value": {
-					"type": "array",
-					"items":  {"$ref": "#/definitions/Page"}
-				},
+			"type":"string",
 			},
 		},
-		"Page": {
-			"type": "object",
-			"properties": {
-				"count": {
-					"type": "integer",
-					"format": "int64"
-				},
-				"next": {
-					"type": "string"
-				},
-				"previous": {
-					"type": "string"
-				},
-				"results": {
-					"type": "array",
-					"items": {"$ref": "#/definitions/PokemonLocation"}
-				}
-			}
-			
-		},
-        
-		"PokemonLocation": {
-			"type": "object",
-		    	"properties": {
-				"name": {
-                		"type": "string"
-             		},
-			"url": {
-                		"type": "string"
-             		}
-            	}
-	},
-        
-        
-    },
+		
     
 	"externalDocs": {
 		"description": "Find out more about Swagger",
