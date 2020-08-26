@@ -44,7 +44,7 @@
 						"description": "Invalid ID supplied"
 					},
 					"404": {
-						"description": "Not found"
+						"description": "Not found test"
 					}
 				}
 			}
