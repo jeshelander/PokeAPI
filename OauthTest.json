@@ -5,7 +5,7 @@
 		"version": "1.0.0",
 		"title": "PokéAPI"
 	},
-	"host": "localhost:44392",
+	"host": "testauth0001.azurewebsites.net",
 	"basePath": "/api",
 	"tags": [
 		{
