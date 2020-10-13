@@ -90,7 +90,7 @@ function RenderCalendarView() {
                 weekends: true,
             }
         },
-        //slotWidth: '80',
+        slotWidth: '80',
         slotLabelFormat:
             [{ month: 'long', year: 'numeric' },
             { week: 'short' },
@@ -387,7 +387,7 @@ function HandlePlacementRender(info) {
     var placementTooltip = new Tooltip(info.el, {
         title: tooltipText,
         html: true,
-        delay: { show: 1000, hide: 100 },
+        delay: { show: 250, hide: 100 },
         placement: 'top',
         trigger: 'hover',
         container: 'body'
