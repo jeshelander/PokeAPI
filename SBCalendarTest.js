@@ -387,7 +387,7 @@ function HandlePlacementRender(info) {
     var placementTooltip = new Tooltip(info.el, {
         title: tooltipText,
         html: true,
-        delay: { show: 250, hide: 100 },
+        delay: { show: 100, hide: 100 },
         placement: 'top',
         trigger: 'hover',
         container: 'body'
