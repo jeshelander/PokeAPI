@@ -90,7 +90,7 @@ function RenderCalendarView() {
                 weekends: true,
             }
         },
-        slotWidth: '',
+        //slotWidth: '80',
         slotLabelFormat:
             [{ month: 'long', year: 'numeric' },
             { week: 'short' },
