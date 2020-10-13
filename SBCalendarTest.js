@@ -98,7 +98,7 @@ function RenderCalendarView() {
             ],
         selectable: true,
         //select: HandleCalendarSelect,
-        resourceAreaWidth: '25%',
+        resourceAreaWidth: '45%',
         resourceGroupField: 'channelName',
         resourceColumns: [
             {
