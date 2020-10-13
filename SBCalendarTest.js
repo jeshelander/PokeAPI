@@ -2,11 +2,11 @@ var environment = "DEV"; // PROD/TEST/DEV
 
 var resourcesRoot = "https://mopeddev.z5.web.core.windows.net/"; // Default is PROD. 
 
-//if (environment == "TEST") { resourcesRoot = "https://mopeddev.z5.web.core.windows.net/"; }
-//else if (environment == "DEV_old") { resourcesRoot = "https://fullcalendardemo.blob.core.windows.net/filecalendarnew/"; }
+if (environment == "TEST") { resourcesRoot = "https://mopeddev.z5.web.core.windows.net/"; }
+else if (environment == "DEV_old") { resourcesRoot = "https://fullcalendardemo.blob.core.windows.net/filecalendarnew/"; }
 // SB Added 5_11_2020 to point to the new SBUX environment. "Dev" as above will be decommisioned at a later date.
-//else if (environment == "DEV") { resourcesRoot = "https://mopeddev.z5.web.core.windows.net/"; }
-//else if (environment == "UAT") { resourcesRoot = "https://mopeddev.z5.web.core.windows.net/"; }
+else if (environment == "DEV") { resourcesRoot = "https://mopeddev.z5.web.core.windows.net/"; }
+else if (environment == "UAT") { resourcesRoot = "https://mopeddev.z5.web.core.windows.net/"; }
 
 var resourcesDataLabelPath = "Controllers/Controller/Controls/Control[@Name='hdnResources']";
 var placementsDataLabelPath = "Controllers/Controller/Controls/Control[@Name='hdnPlacements']";
