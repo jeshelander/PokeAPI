@@ -81,7 +81,7 @@ function RenderCalendarView() {
         },
         now: calStartDate,
         editable: false, // enable draggable events
-        aspectRatio: 2.25,
+        aspectRatio: 4,
         defaultView: 'resourceTimelineFiscalWeek',
         views: {
             resourceTimelineFiscalWeek: {
